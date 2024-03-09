@@ -1,0 +1,6 @@
+site_name: PYPL4
+repo_url: https://github.com/MauricioPavani/pypl4
+repo_uri: tree/master/docs
+
+theme:
+  name: material
