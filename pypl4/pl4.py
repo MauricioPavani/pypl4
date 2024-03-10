@@ -1,5 +1,5 @@
 class PL4:
-    def __init__(self):
+    def __init__(self, miscData, dfHEAD, data):
         ...
 
     def getFromNode(self):
