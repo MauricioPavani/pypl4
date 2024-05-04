@@ -5,7 +5,6 @@ from pytest import raises
 from errors.ReadError import FileNotPL4Error
 from pypl4.readPL4 import readfile
 
-
 def test_open_a_pl4_file_with_readfile():
     path = '/home/mauricio/Documentos/pypl4/tests/exemple.pl4'
     result = readfile(path)

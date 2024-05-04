@@ -1,6 +1,8 @@
 class PL4:
     def __init__(self, miscData, dfHEAD, data):
-        ...
+        self.miscData = miscData
+        self.dfHEAD = dfHEAD
+        self.data = data
 
     def getFromNode(self):
         ...
