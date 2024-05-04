@@ -1,7 +1,7 @@
 class PL4:
     def __init__(self, miscData, dfHEAD, data):
         self.miscData = miscData
-        self.dfHEAD = dfHEAD
+        self.dfHEAD = self._convertType(dfHEAD)
         self.data = data
 
     def getFromNode(self):
@@ -46,5 +46,20 @@ class PL4:
         df['TYPE'] = [func(i) for i in df['TYPE']]
         return df
 
-    def getVarData(self):
-        ...
+    def getVarData(self, Type, From, To):
+        index = None
+
+        for i in range(len(self.dfHEAD)):
+            if (
+                self.dfHEAD['TYPE'][i] == Type
+                and self.dfHEAD['FROM'][i] == From
+                and self.dfHEAD['TO'][i] == To
+            ):                
+                index = i
+                break
+
+        if not index == None:
+            return self.data[:, index + 1]
+        else:
+            print('Variable %s-%s of %s not found!' % (From, To, Type))
+            return None
