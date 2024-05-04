@@ -1,7 +1,7 @@
 import mmap
 import struct
 
-import numpy
+import numpy as np
 
 from errors.ReadError import FileNotPL4Error
 from pypl4.pl4 import PL4
@@ -68,7 +68,7 @@ def readPL4(pl4file: str):
         nullbytes = miscData['pl4size'] - expsize
 
     data = np.memmap(
-        f,
+        file,
         dtype=np.float32,
         mode='r',
         shape=(miscData['steps'], miscData['nvar'] + 1),
