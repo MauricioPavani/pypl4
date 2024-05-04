@@ -25,7 +25,7 @@ class PL4:
         )
 
     def getSteps(self):
-        ...
+        return self.miscData['steps']
 
     def getTmax(self):
         ...
