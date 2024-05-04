@@ -9,7 +9,8 @@ class PL4:
         return from_node
 
     def getToNode(self):
-        ...
+        to_node = [x for x in self.dfHEAD['TO'] if not (x == '')]
+        return to_node
 
     def getTypeSinal(self):
         ...
