@@ -5,7 +5,8 @@ class PL4:
         self.data = data
 
     def getFromNode(self):
-        ...
+        from_node = [x for x in self.dfHEAD['FROM'] if not (x == '')]
+        return from_node
 
     def getToNode(self):
         ...
