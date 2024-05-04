@@ -28,7 +28,7 @@ class PL4:
         return self.miscData['steps']
 
     def getTmax(self):
-        ...
+        return self.data[:, 0][-1]
 
     def _convertType(self):
         ...
