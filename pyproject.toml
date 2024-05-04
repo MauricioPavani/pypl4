@@ -1,9 +1,22 @@
 [tool.poetry]
 name = "pypl4"
 version = "0.1.0"
-description = ""
-authors = ["Your Name <you@example.com>"]
+description = "O pacote pypl permite ler arquivos .pl4 e selecionar as oscilografias registradas nele."
+authors = ["Mauricio <mauricio_pavani@hotmail.com>"]
 readme = "README.md"
+license = "GPL-3.0-only"
+packages = [
+	 {include = "pypl4"},
+	 {include = "errors"},
+	 ]
+classifiers = [
+	   "Topic :: Education",
+	   "Environment :: Console",
+	   ]
+
+[tool.poetry.urls]
+"Código" = "https://github.com/MauricioPavani/pypl4"
+"Bug Tracker" = "https://github.com/MauricioPavani/pypl4/issues"
 
 [tool.poetry.dependencies]
 python = "^3.11"
