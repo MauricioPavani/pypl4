@@ -13,7 +13,8 @@ class PL4:
         return to_node
 
     def getTypeSinal(self):
-        ...
+        type_signal = [x for x in self.dfHEAD['TYPE'] if not (x == '')]
+        return type_signal
 
     def getDeltaTfromSimulation(self):
         ...
