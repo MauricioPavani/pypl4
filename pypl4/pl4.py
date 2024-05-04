@@ -20,7 +20,9 @@ class PL4:
         return self.miscData['deltat']
 
     def getDeltaTfromPlot(self):
-        ...
+        return self.data[:, 0][-1] / (
+            self.miscData['steps'] - self.miscData['steps'] % 2
+        )
 
     def getSteps(self):
         ...
