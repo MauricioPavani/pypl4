@@ -30,8 +30,21 @@ class PL4:
     def getTmax(self):
         return self.data[:, 0][-1]
 
-    def _convertType(self):
-        ...
+    def _convertType(self, df):
+        def func(type):
+            if type == 4:
+                return 'V-node'
+            if type == 7:
+                return 'E-bran'
+            if type == 8:
+                return 'V-bran'
+            if type == 9:
+                return 'I-bran'
+
+            return type
+
+        df['TYPE'] = [func(i) for i in df['TYPE']]
+        return df
 
     def getVarData(self):
         ...
