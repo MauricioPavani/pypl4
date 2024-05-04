@@ -17,7 +17,7 @@ class PL4:
         return type_signal
 
     def getDeltaTfromSimulation(self):
-        ...
+        return self.miscData['deltat']
 
     def getDeltaTfromPlot(self):
         ...
