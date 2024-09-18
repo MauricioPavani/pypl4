@@ -16,6 +16,9 @@ class PL4:
         type_signal = [x for x in self.dfHEAD['TYPE'] if not (x == '')]
         return type_signal
 
+    def getMeasurementNode(self):
+        return [(self.dfHEAD['TYPE'][i], self.dfHEAD['FROM'][i], self.dfHEAD['TO'][i]) for i in range(len(self.dfHEAD['TYPE'])) ]
+    
     def getDeltaTfromSimulation(self):
         return self.miscData['deltat']
 
@@ -49,7 +52,7 @@ class PL4:
     def getVarData(self, Type, From, To):
         index = None
 
-        for i in range(len(self.dfHEAD['Type'])):
+        for i in range(len(self.dfHEAD['TYPE'])):
             if (
                 self.dfHEAD['TYPE'][i] == Type
                 and self.dfHEAD['FROM'][i] == From
