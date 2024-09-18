@@ -49,7 +49,7 @@ class PL4:
     def getVarData(self, Type, From, To):
         index = None
 
-        for i in range(len(self.dfHEAD)):
+        for i in range(len(self.dfHEAD['Type'])):
             if (
                 self.dfHEAD['TYPE'][i] == Type
                 and self.dfHEAD['FROM'][i] == From
